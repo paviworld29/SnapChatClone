@@ -1,7 +1,8 @@
 import React from 'react';
 import { TouchableOpacity, Text } from 'react-native';
 import Color from '../styles/colors';
-import FontFamily from '../styles/fontFamily';
+import { moderateScale, textScale } from '../styles/responsiveSize';
+import commonStyles from '../styles/commonStyles';
 
 const BtnComp = ({ btnText, onPress, btnStyle }) => {
   return (
@@ -14,15 +15,12 @@ const BtnComp = ({ btnText, onPress, btnStyle }) => {
 const styles = {
   btnStyle: {
     backgroundColor: Color.red,
-    height: 62,
+    height: moderateScale(62),
     alignItems: 'center',
     justifyContent: 'center',
   },
   textStyle: {
-    color: Color.white,
-    fontSize: 23,
-    fontFamily: FontFamily.medium,
-    textTransform: 'uppercase',
+    ...commonStyles.fontsize24
   },
 };
 

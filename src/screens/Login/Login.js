@@ -1,15 +1,30 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, Alert } from 'react-native'
+import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import Loader from '../../components/Loader'
+import Header from '../../components/Header'
+import WrapperContainer from '../../components/WrapperContainer'
+
+
 
 const Login = () => {
+
+const [state, setState] = useState({
+  isLoading:false,
+  email: '',
+  password: ''
+
+
+})
+
+const {isLoading, email, password} = state
+
   return (
-    <SafeAreaView style={{flex:1,backgroundColor:'pink'}}>
-       <View> 
-      <Text>Login</Text>
-    </View>
-  
-    </SafeAreaView>
+   <WrapperContainer isLoading={isLoading}>
+    
+    <Header />
+    
+   </WrapperContainer>
   )
 }
 
