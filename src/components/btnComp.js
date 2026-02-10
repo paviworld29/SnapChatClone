@@ -4,10 +4,10 @@ import Color from '../styles/colors';
 import { moderateScale, textScale } from '../styles/responsiveSize';
 import commonStyles from '../styles/commonStyles';
 
-const BtnComp = ({ btnText, onPress, btnStyle }) => {
+const BtnComp = ({ btnText, onPress, btnStyle,textStyle }) => {
   return (
     <TouchableOpacity style={[styles.btnStyle, btnStyle]} activeOpacity={0.8} onPress={onPress}>
-      <Text style={styles.textStyle}>{btnText}</Text>
+      <Text style={{...styles.textStyle,textStyle}  }>{btnText}</Text>
     </TouchableOpacity>
   );
 };

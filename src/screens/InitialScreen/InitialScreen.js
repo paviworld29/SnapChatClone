@@ -11,12 +11,16 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Color from '../../styles/colors';
 import FontFamily from '../../styles/fontFamily';
 import BtnComp from '../../components/btnComp';
+import en from '../../constants/Lang/en';
+import strings from '../../constants/Lang';
+
 
 
 
 
 const InitialScreen = ({ navigation }) => {
   return (
+    
     <ImageBackground
       source={require('../../assets/Images/bgImage.jpeg')}
       style={{ flex: 1, justifyContent: 'flex-end' }}
@@ -24,11 +28,11 @@ const InitialScreen = ({ navigation }) => {
       <SafeAreaView>
 
         <BtnComp
-          btnText={'Log in'} onPress={() => navigation.navigate(navigationString.Login)}
+          btnText={strings.LOGIN} onPress={() => navigation.navigate(navigationString.Login)}
          
         />
         <BtnComp
-          btnText={'Sign up'}
+          btnText={strings.SIGNUP}
           btnStyle= {{ backgroundColor: Color.blue}}
           onPress={()=> navigation.navigate(navigationString.Signup)}
          

@@ -3,6 +3,7 @@ import React from 'react'
 import imagePath from '../constants/imagePath'
 import { useNavigation } from '@react-navigation/native'
 import { moderateScale } from '../styles/responsiveSize'
+import colors from '../styles/colors'
 
 const Header = ({
     leftImg = imagePath.isBack,
@@ -14,7 +15,7 @@ const Header = ({
     return (
         <View style={{ ...styles.headerStyle, ...headerStyle }}>
             <TouchableOpacity onPress={!!onpress ? onpress : () => navigation.goBack()}>
-                <Image source={leftImg} />
+                <Image style={{tintColor:colors.blue}} source={leftImg} />
             </TouchableOpacity>
 
         </View>
