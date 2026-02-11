@@ -1,22 +1,18 @@
-import { View, ActivityIndicator, Modal, StyleSheet } from 'react-native'
-import React from 'react'
+import { ActivityIndicator, Modal, StyleSheet, View } from 'react-native';
 
 const Loader = ({ isLoading = false }) => {
-
   if (isLoading) {
     return (
-      <Modal transparent >
+      <Modal transparent>
         <View style={styles.loaderStyle}>
           <ActivityIndicator size="large" color={'blue'} />
         </View>
       </Modal>
-    )
+    );
   }
 
-  return null
-
-}
-
+  return null;
+};
 
 const styles = StyleSheet.create({
   loaderStyle: {
@@ -27,9 +23,8 @@ const styles = StyleSheet.create({
     bottom: 0,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0,0,0,0.3)'
-  }
-})
+    backgroundColor: 'rgba(0,0,0,0.3)',
+  },
+});
 
-
-export default Loader
+export default Loader;

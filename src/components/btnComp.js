@@ -1,13 +1,16 @@
-import React from 'react';
-import { TouchableOpacity, Text } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 import Color from '../styles/colors';
-import { moderateScale, textScale } from '../styles/responsiveSize';
 import commonStyles from '../styles/commonStyles';
+import { moderateScale } from '../styles/responsiveSize';
 
-const BtnComp = ({ btnText, onPress, btnStyle,textStyle }) => {
+const BtnComp = ({ btnText, onPress, btnStyle, textStyle }) => {
   return (
-    <TouchableOpacity style={[styles.btnStyle, btnStyle]} activeOpacity={0.8} onPress={onPress}>
-      <Text style={{...styles.textStyle,textStyle}  }>{btnText}</Text>
+    <TouchableOpacity
+      style={[styles.btnStyle, btnStyle]}
+      activeOpacity={0.8}
+      onPress={onPress}
+    >
+      <Text style={{ ...styles.textStyle, textStyle }}>{btnText}</Text>
     </TouchableOpacity>
   );
 };
@@ -20,7 +23,7 @@ const styles = {
     justifyContent: 'center',
   },
   textStyle: {
-    ...commonStyles.fontsize24
+    ...commonStyles.fontsize24,
   },
 };
 
