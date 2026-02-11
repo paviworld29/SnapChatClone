@@ -3,6 +3,7 @@ export default {
   blue: '#10adff',
   white: '#ffffff',
   black: '#1111',
+  green:'green',
   blackOpacity20: 'rgba(0,0,0.21)',
   blackOpacity50: 'rgba(0,0,0.51)',
 };

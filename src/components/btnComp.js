@@ -3,12 +3,19 @@ import Color from '../styles/colors';
 import commonStyles from '../styles/commonStyles';
 import { moderateScale } from '../styles/responsiveSize';
 
-const BtnComp = ({ btnText, onPress, btnStyle, textStyle }) => {
+const BtnComp = ({
+   btnText,
+   onPress,
+   btnStyle,
+   textStyle ,
+   isDisable=false
+  }) => {
   return (
     <TouchableOpacity
       style={[styles.btnStyle, btnStyle]}
       activeOpacity={0.8}
       onPress={onPress}
+      isDisable={false}
     >
       <Text style={{ ...styles.textStyle, textStyle }}>{btnText}</Text>
     </TouchableOpacity>
@@ -23,7 +30,7 @@ const styles = {
     justifyContent: 'center',
   },
   textStyle: {
-    ...commonStyles.fontsize24,
+    ...commonStyles.fontsize24, 
   },
 };
 
