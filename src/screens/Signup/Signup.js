@@ -6,7 +6,6 @@ import TextinputWithLable from '../../components/TextinputWithLable'
 import WrapperContainer from '../../components/WrapperContainer'
 import strings from '../../constants/Lang'
 import en from '../../constants/Lang/en'
-import commonStyles from '../../styles/commonStyles'
 import styles from './styles'
 const Login = () => {
   const [state, setState] = useState({

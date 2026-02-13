@@ -9,6 +9,7 @@ import en from '../../constants/Lang/en';
 import colors from '../../styles/colors';
 import commonStyles from '../../styles/commonStyles';
 import styles from './styles';
+import actions from '../../redux/actions';
 
 const Login = () => {
   const [state, setState] = useState({
@@ -34,6 +35,7 @@ const Login = () => {
   }, [email, password]);
 
   const onLogin = () => {
+    actions.login(true)
     Alert.alert('Login successfully');
   };
 

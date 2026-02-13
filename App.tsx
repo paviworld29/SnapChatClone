@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, Button, Alert } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Provider } from 'react-redux';
 import Route from './src/navigation/Routes';
+import store from './src/redux/store';
 
 const App = () => {
   return (
-    <View style={{ flex: 1, backgroundColor: 'red' }}>
-      <Route />
-    </View>
+    <Provider store={store}>
+      <SafeAreaProvider>
+        <Route />
+      </SafeAreaProvider>
+    </Provider>
   );
 };
 
